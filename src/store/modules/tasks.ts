@@ -65,7 +65,6 @@ const actions = {
     },
     async CreateTask(context : any, payload: any){
         try {
-            // const response = await axios.get('${process.env.VITE_SOCKET_URL}/tasks');
             const response = await TaskService.create(payload); // Use the environment variable
 
             console.log('response', response)
