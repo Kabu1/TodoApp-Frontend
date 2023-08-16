@@ -25,9 +25,11 @@ import { mapActions, mapGetters } from 'vuex'
                     }
                     this.CreateTask(payload)
                     this.clearForm()
+                    console.log('payload', payload)
                 } else {
+                    console.log('or here error')
 
-                    this.error = 'please fill all the required fields'
+                    this.error = 'please fill all the required fields jjjjjkkj'
                 }
                             //  
             },
@@ -77,7 +79,7 @@ import { mapActions, mapGetters } from 'vuex'
             <div class="w-full md:w-1/2">
               <p class="text-gray-700 text-left text-lg pb-2 font-semibold">All Tasks</p>
                 
-                <div class="h-72 overflow-y-scroll w-full md:w-11/12 " v-if="GetTasks.data.length">
+                <div class="h-72 overflow-y-scroll w-full md:w-11/12 " v-if="GetTasks.data?.length">
                     <div v-for=" task in GetTasks.data" :key="task.id">
                         <div class="my-2 bg-white shadow rounded-md border-t-4  w-11/12" :class="task.completed ? 'border-green-400':'border-red-400'" >
                             <div class="border-b-2 border-gray-300 p-2 items-center w-full flex justify-between">

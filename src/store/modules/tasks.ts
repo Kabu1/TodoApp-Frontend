@@ -64,13 +64,14 @@ const actions = {
         }
     },
     async CreateTask(context : any, payload: any){
+        console.log('check the detils shshshhs', context, payload)
         try {
             const response = await TaskService.create(payload); // Use the environment variable
 
-            console.log('response', response)
+            console.log('response ya ahapa hahahahahahahahaha', response)
             context.dispatch('FetchTasks')
         } catch (error) {
-            console.log('error', error);
+            console.log('error which eeerororororo', error);
             
         }
     },

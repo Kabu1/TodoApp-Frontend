@@ -5,6 +5,7 @@ export default {
         return Api().get('tasks');
     },
     create(payload: any) {
+        console.log('payload kwa create function', payload)
         return Api().post('tasks/new', payload)
     },
     update(payload : any){
