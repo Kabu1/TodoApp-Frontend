@@ -2,12 +2,12 @@
 import axios from 'axios'
 import NProgress from 'nprogress';
 
-const base_url = import.meta.env.VITE_SOCKET_URL
-console.log('base url', base_url)
+// const base_url = import.meta.env.VITE_SOCKET_URL
+// console.log('base url', base_url)
 
 export default () => {
     const api = axios.create({
-        baseURL: base_url
+        baseURL: import.meta.env.VITE_SOCKET_URL
     });
     api.interceptors.request.use(config => {
         NProgress.start()

@@ -6,7 +6,7 @@ export default {
     },
     create(payload: any) {
         console.log('payload kwa create function', payload)
-        return Api().post('tasks/new', payload)
+        return Api().post('/tasks/new', payload)
     },
     update(payload : any){
         return Api().patch(`tasks/progress/${payload.id}`, payload.data)
